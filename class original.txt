@@ -1,0 +1,30 @@
+void incluir (struct lista *l,int valor){
+	Struct no*novo=(struct no*)malloc(sizeof(struct no));
+	novo->dado = valor;
+	novo->prox=null;
+	if(l->prim==null)
+	  l->prim=novo;
+	else
+	  l->ult->prox =novo;
+	  l->ult=novo;
+}
+
+
+void zerarlista(Struct lista *l)
+{
+	l->prim=null;
+	l->ult=null;
+	l->quant = 0;
+
+
+}
+
+int obter(struct lista l,int pos)
+{
+	struct no*atual=l.prim;
+	for(int =0;i<pos;i++){
+	atual = atual->prox;
+	return atual->dado;
+
+}
+}
