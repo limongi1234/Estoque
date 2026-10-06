@@ -1,0 +1,19 @@
+# Classes compiladas
+*.class
+bin/
+out/
+
+# IntelliJ IDEA / Eclipse
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+CLAUDE.md

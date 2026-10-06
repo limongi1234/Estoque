@@ -6,7 +6,7 @@
           //Criaremos uma nova classe produto para passarmos os valores
 
          public void IncluirNovoProduto (Estoque lista, int codigo, String descricao, double preco, int quantidade) //Passaremos tanto a classe Estoque como os valores do novo produto a ser incluso.
-         //Lembrando que a classe Estoque é considerada a nossa Lista.
+         //Lembrando que a classe Estoque Ã© considerada a nossa Lista.
          {
                 int aux;
                 Produto atual = new Produto();
@@ -24,11 +24,11 @@
                 else
                 {
                     aux = Pesquisar(lista, codigo);
-                    if (aux == 1)//Verifica se o código já existe ou não. Observa a função Pesquisar mais abaixo.
-                        JOptionPane.showMessageDialog(null, "Código já utilizado em outro produto");
+                    if (aux == 1)//Verifica se o cÃ³digo jÃ¡ existe ou nÃ£o. Observa a funÃ§Ã£o Pesquisar mais abaixo.
+                        JOptionPane.showMessageDialog(null, "CÃ³digo jÃ¡ utilizado em outro produto");
                     else
                     {
-                        lista.ult.prox = new Produto(novo);//É criado o produto a partir do ultimo.
+                        lista.ult.prox = new Produto(novo);//Ã‰ criado o produto a partir do ultimo.
                         lista.ult = lista.ult.prox;// Assim sendo, o ultimo passar a ser o novo produto criado.
                         lista.quant++;
                     }
@@ -41,14 +41,14 @@
 
                 atual = lista.prim; //Aqui, o No atual recebera o primeiro da lista.
 
-                if (Pesquisar(lista, codigo) > 0)//Verifica se o código existe. Analisar a função Pesquisar para mais informações.
-                   for(int i = 0; i < lista.quant; i++) //Percorre a Lista até o n desejado a partir do código.
+                if (Pesquisar(lista, codigo) > 0)//Verifica se o cÃ³digo existe. Analisar a funÃ§Ã£o Pesquisar para mais informaÃ§Ãµes.
+                   for(int i = 0; i < lista.quant; i++) //Percorre a Lista atÃ© o n desejado a partir do cÃ³digo.
                    {
                         if (codigo == atual.codigo)
                         {
-                            if(quantidade < 0)//Realiza a verificação se esta dando baixa ou entrada no estoque
-                                if(atual.quantidade < (quantidade *- 1)) //Testa se atual Ã© menor que o valor a ser dado baixa.
-                                   JOptionPane.showMessageDialog(null, "O valor a ser retirado é maior do que o existente.");
+                            if(quantidade < 0)//Realiza a verificaÃ§Ã£o se esta dando baixa ou entrada no estoque
+                                if(atual.quantidade < (quantidade *- 1)) //Testa se atual ÃƒÂ© menor que o valor a ser dado baixa.
+                                   JOptionPane.showMessageDialog(null, "O valor a ser retirado Ã© maior do que o existente.");
                                 else
                                    atual.quantidade += quantidade;//Modifica os valores de quantidade.
                             else
@@ -59,7 +59,7 @@
                             atual = atual.prox;
                     }
                  else
-                     JOptionPane.showMessageDialog(null, "Código informado não existe.");
+                     JOptionPane.showMessageDialog(null, "CÃ³digo informado nÃ£o existe.");
          }
 
          public void AlterarInformacoes(Estoque lista, int codigo, double valor, String descricao)
@@ -67,12 +67,12 @@
                 Produto atual = new Produto();
                 atual = lista.prim;
 
-                if (Pesquisar(lista, codigo) > 0)//Verifica se o código existe. Analisar a função Pesquisar para mais informações.
+                if (Pesquisar(lista, codigo) > 0)//Verifica se o cÃ³digo existe. Analisar a funÃ§Ã£o Pesquisar para mais informaÃ§Ãµes.
                    for(int i = 0; i < lista.quant; i++)
                    {
                            if (codigo == atual.codigo)
                            {
-                              atual.preco = valor; //Altera as informações.
+                              atual.preco = valor; //Altera as informaÃ§Ãµes.
                               atual.descricao = descricao;
                                break;
                            }
@@ -80,7 +80,7 @@
                                atual = atual.prox;
                    }
                 else
-                    JOptionPane.showMessageDialog(null, "Código informado não existe.");
+                    JOptionPane.showMessageDialog(null, "CÃ³digo informado nÃ£o existe.");
          }
 
          private int Pesquisar(Estoque lista, int codigo)
@@ -90,7 +90,7 @@
                 atual = lista.prim; //Aqui, o No atual recebera o primeiro da lista.
 
                 int i, cont = 0;
-                for(i = 0; i < lista.quant; i++) //Percorre a Lista e verifica se o código já está sendo utilizado;
+                for(i = 0; i < lista.quant; i++) //Percorre a Lista e verifica se o cÃ³digo jÃ¡ estÃ¡ sendo utilizado;
                 {
                         if (codigo == atual.codigo)
                             cont++;
@@ -106,7 +106,7 @@
 
                 atual = lista.prim; //Aqui, o No atual recebera o primeiro da lista.
                 if (Pesquisar(lista, codigo) > 0)
-                   for(int i = 0; i < lista.quant; i++) //Percorre a Lista até achar o cóigo, se achar irá informar os valores
+                   for(int i = 0; i < lista.quant; i++) //Percorre a Lista atÃ© achar o cÃ³igo, se achar irÃ¡ informar os valores
                    {
                         if(codigo == atual.codigo)
                         {
@@ -117,7 +117,7 @@
                             atual = atual.prox;
                    }
                 else
-                    JOptionPane.showMessageDialog(null, "Este produto não existe.");
+                    JOptionPane.showMessageDialog(null, "Este produto nÃ£o existe.");
          }
 
          public void ExcluirProduto(Estoque lista, int codigo) //Localiza e exclui um produto

@@ -6,7 +6,7 @@ public class Produto
 
        public Produto prox;
 
-       public Produto () //A classe produto ter· 2 construtores para que possamoas realizar as ligaÁıes de no.
+       public Produto () //A classe produto ter√° 2 construtores para que possamoas realizar as liga√ß√µes de no.
        {
        }
 
@@ -20,6 +20,6 @@ public class Produto
 
        public String toString()
        {
-              return "CÛdigo: " + codigo + "\nDescriÁ„o: " + descricao + "\nQuantidade: " + quantidade + "\nValor Unit√°rio: " + preco;
+              return "C√≥digo: " + codigo + "\nDescri√ß√£o: " + descricao + "\nQuantidade: " + quantidade + "\nValor Unit√É¬°rio: " + preco;
        }
 }
